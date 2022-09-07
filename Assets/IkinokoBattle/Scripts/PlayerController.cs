@@ -9,7 +9,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 3;
     [SerializeField] private float jumpPower = 3;
-    private CharacterController _characterController;
+    [SerializeField] private Animator animator;
+
+   private CharacterController _characterController;
 
     private Transform _transform;
     private Vector3 _moveVelocity;
@@ -44,5 +46,7 @@ public class PlayerController : MonoBehaviour
             _moveVelocity.y += Physics.gravity.y * Time.deltaTime;
         }
         _characterController.Move(_moveVelocity * Time.deltaTime);
+
+        animator.SetFloat("MoveSpeed", new Vector3(_moveVelocity.x, 0, _moveVelocity.z).magnitude);
     }
 }
