@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(PlayerStatus))]
+[RequireComponent(typeof(MobAttack))]
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -15,12 +17,16 @@ public class PlayerController : MonoBehaviour
 
     private Transform _transform;
     private Vector3 _moveVelocity;
+    private PlayerStatus _status;
+    private MobAttack _attack;
    
     void Start()
     {
         _characterController = GetComponent<CharacterController>();
 
         _transform = transform;
+        _status = GetComponent<PlayerStatus>();
+        _attack = GetComponent<MobAttack>();
     }
 
     // Update is called once per frame
@@ -28,10 +34,24 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log(_characterController.isGrounded ? "地上にいます" : "空中です");
 
-        _moveVelocity.x = Input.GetAxis("Horizontal") * moveSpeed;
-        _moveVelocity.z = Input.GetAxis("Vertical") * moveSpeed;
+        if (Input.GetButtonDown("Fire1"))
+        {
+            _attack.AttackIfPossible();
+        }
 
-        _transform.LookAt(_transform.position + new Vector3(_moveVelocity.x, 0, _moveVelocity.z));
+        if (_status.IsMovable)
+        {
+            _moveVelocity.x = Input.GetAxis("Horizontal") * moveSpeed;
+            _moveVelocity.z = Input.GetAxis("Vertical") * moveSpeed;
+
+            _transform.LookAt(_transform.position + new Vector3(_moveVelocity.x, 0, _moveVelocity.z));
+        }
+
+        else
+        {
+            _moveVelocity.x = 0;
+            _moveVelocity.z = 0;
+        }
 
         if (_characterController.isGrounded)
         {
