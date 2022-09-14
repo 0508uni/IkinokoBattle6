@@ -550,6 +550,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1505239618 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5137006719497931464, guid: 91636b84e8576964ba8d4044ea5b7ce3, type: 3}
+  m_PrefabInstance: {fileID: 5137006718135353485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1505239622
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505239618}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1765451486
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,6 +1008,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: smile_green
       objectReference: {fileID: 0}
+    - target: {fileID: 5136880827639791027, guid: 91636b84e8576964ba8d4044ea5b7ce3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5137006717599183640, guid: 91636b84e8576964ba8d4044ea5b7ce3, type: 3}
       propertyPath: lifeMax
       value: 2
@@ -1001,6 +1026,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5137006719497931464, guid: 91636b84e8576964ba8d4044ea5b7ce3, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5137006719497931466, guid: 91636b84e8576964ba8d4044ea5b7ce3, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

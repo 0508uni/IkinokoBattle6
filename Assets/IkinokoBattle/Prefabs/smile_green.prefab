@@ -200,7 +200,7 @@ Transform:
   - {fileID: 5137006718223972524}
   - {fileID: 5137006719497931467}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &5051862745261006305
 Animator:
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22952433b87571243a4b267a4fa12fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeMax: 100
+  lifeMax: 2
 --- !u!114 &-7993435797950457391
 MonoBehaviour:
   m_ObjectHideFlags: 0
