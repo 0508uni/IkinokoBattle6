@@ -19,14 +19,5 @@ public class PlayerStatus : MobStatus
         SceneManager.LoadScene("GameOverScene");
     }
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
