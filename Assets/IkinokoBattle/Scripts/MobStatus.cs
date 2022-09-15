@@ -18,6 +18,7 @@ public abstract class MobStatus : MonoBehaviour
     public bool IsAttackable => StateEnum.Normal == _state;
 
     public float LifeMax => lifeMax;
+    public float Life => _life;
 
     [SerializeField] private float lifeMax = 10;
     protected Animator _animator;

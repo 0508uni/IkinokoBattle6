@@ -22,7 +22,7 @@ public class MobltemDropper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(_status.LifeMax <= 0)
+        if(_status.Life <= 0)
         {
             DropIfNeeded();
         }
