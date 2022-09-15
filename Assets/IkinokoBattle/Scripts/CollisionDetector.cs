@@ -14,21 +14,15 @@ public class CollisionDetector : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         onTriggerStay.Invoke(other);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
         onTriggerEnter.Invoke(other);
     }
+
     [Serializable]
     public class TriggerEvent : UnityEvent<Collider>
     {
-
-    }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
