@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a716eb1e9baa0409bbee48927ba49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropRate: 0.5
+  dropRate: 1
   itemPrefab: {fileID: 4179975987269053916, guid: df65f7845c3f3a944bbb0ca94024fa6c, type: 3}
   number: 10
 --- !u!1 &5136880827825126405
