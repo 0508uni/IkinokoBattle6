@@ -36,16 +36,14 @@ public class Item : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
 
-        Destroy(gameObject);
-    }
-    void Start()
-    {
-        
-    }
+        OwnedItemsData.Instance.Add(type);
+        OwnedItemsData.Instance.Save();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        foreach(var item in OwnedItemsData.Instance.OwnedItems)
+        {
+            Debug.Log(item.Type + "を" + item.Number + "個所持");
+        }
+
+        Destroy(gameObject);
     }
 }
