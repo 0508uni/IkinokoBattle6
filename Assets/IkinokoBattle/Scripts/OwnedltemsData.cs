@@ -15,7 +15,7 @@ public class OwnedItemsData
     {
         get
         {
-            if (null == Instance)
+            if (null == _instance)
             {
                 _instance = PlayerPrefs.HasKey(PlayerPrefskey) ? JsonUtility.FromJson<OwnedItemsData>(PlayerPrefs.GetString(PlayerPrefskey)) : new OwnedItemsData();
             }
@@ -28,7 +28,7 @@ public class OwnedItemsData
 
     public OwnedItem[] OwnedItems
     {
-        get { return OwnedItems.ToArray(); }
+        get { return ownedItems.ToArray(); }
     }
 
     [SerializeField] private List<OwnedItem> ownedItems = new List<OwnedItem>();

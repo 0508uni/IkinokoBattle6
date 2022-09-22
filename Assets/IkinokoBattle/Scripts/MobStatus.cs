@@ -29,10 +29,12 @@ public abstract class MobStatus : MonoBehaviour
     {
         _life = lifeMax;
         _animator = GetComponentInChildren<Animator>();
+        LifeGaugeContainer.Instance.Add(this);
     }
 
     protected virtual void OnDie()
     {
+        LifeGaugeContainer.Instance.Remove(this);
     }
 
     public void Damage(int damage)
@@ -63,8 +65,4 @@ public abstract class MobStatus : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
